@@ -1,0 +1,1 @@
+Los .html de telmplates son de lo que realizaron del back y lo que esta en el la carpeta "FundacionSomosBarro" es lo que se realizo del front.

@@ -1,0 +1,43 @@
+
+header, section, footer{
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+
+}
+header{
+    height: 450px;
+    background-image: url(imagenes/inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+#barraNav{
+    height: 40px;
+    width: 100%;
+    position: fixed;
+}
+section{
+    height: 600px;
+    background-color: aquamarine;
+    
+}
+footer{
+    height: 200px;
+    background-color: brown;
+}
+
+#seccion1, #seccion2, #seccion3{
+    height: 600px;
+    background-color: chocolate;
+    
+}
+#inicio, #registrar{
+    width: 400px;
+    height: 500px;
+    background-color: blue;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 13px;
+}
+
