@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+<header>
+    <p>Fundacion somos barro</p>
+    <ul>
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a>Nosotros</a></li>
+        <li><a>contacto</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="">cerrar sesion</a></li>
+        {% else %}
+        <li><a href="{% url 'signin' %}">Ingresar</a></li>
+        <li><a href="{% url 'signup' %}">Crear cuenta</a></li>
+        {% endif %}
+    </ul>
+</header>
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>
