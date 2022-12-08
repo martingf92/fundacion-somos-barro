@@ -8,7 +8,11 @@ header, section, footer{
 
 
 header{
+<<<<<<< HEAD
     height: 500px;
+=======
+    height: 600px;
+>>>>>>> e0b70dd9cf6f99efb2accca51a670b0b184985dc
     
     background-image: url(imagenes/paredon2.jpg);
     background-repeat: no-repeat;
