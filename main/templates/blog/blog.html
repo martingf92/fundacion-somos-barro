@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+
+
+<section class="container-fluid ">
+    <div id="">
+        <h3>Nuestro blog</h3>
+        <select>
+            <option><a href="{% url 'blog-category' category %}">Eventos</a></option>
+            <option>Talleres</option>
+            <option>Visitas</option>
+        </select>
+        
+    </div>
+    <div id="contenedorNoticias" class="contenido">
+
+
+        {% for notice in news %}
+        <!-- Cuerpo noticia -->
+        <div class="card cardNoticia">
+            <img src="{{ notice.img.url }}" class="card-img-top" alt="imagen de noticia">
+            <div class="card-body">
+                <h5 class="card-title">{{ notice.title }}</h5>
+                <p class="card-text">Subida el {{ notice.created }}</p>
+
+                <a type="button" class="btn btn-primary" href="{% url 'newsDetail' notice.id %}">Leer mas</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{{form.as_p}}
+
+{% endblock %}
