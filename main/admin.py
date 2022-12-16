@@ -5,3 +5,4 @@ admin.site.register(User)
 admin.site.register(News)
 admin.site.register(Comment)
 
+

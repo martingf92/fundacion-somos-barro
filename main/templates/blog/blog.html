@@ -5,14 +5,27 @@
 
 
 <section class="container-fluid ">
-    <div id="">
+    <div id="blog">
         <h3>Nuestro blog</h3>
-        <select>
-            <option><a href="{% url 'blog-category' category %}">Eventos</a></option>
-            <option>Talleres</option>
-            <option>Visitas</option>
-        </select>
-        
+        <ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Filtrar por categoria</a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'blogCategory' 'TALLER' %}">Talleres</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'blogCategory' 'VISITA' %}">Visitas</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'blogCategory' 'EVENTO' %}">Eventos</a></li>
+                </ul>
+            </li>
+        </ul>
+
     </div>
     <div id="contenedorNoticias" class="contenido">
 

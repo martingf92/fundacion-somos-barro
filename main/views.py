@@ -33,6 +33,9 @@ def blog(request):
                                 {'news':news,
                                 'session': session(request)})
 
+def video(request):
+    return render(request, 'pages/video.html')
+
 def blogCategory(request, category):
     news = News.objects.filter(category=category)
     if session(request) != False:
@@ -46,6 +49,7 @@ def blogCategory(request, category):
         return render(request, 'blog/blog.html',
                                 {'news':news,
                                 'session': session(request)})
+
 def newsDetail(request, id_news):  
     try: 
         news = News.objects.get(id=id_news)

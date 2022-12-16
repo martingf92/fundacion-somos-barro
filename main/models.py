@@ -12,8 +12,7 @@ class User(models.Model):
     
     password = models.CharField(
         verbose_name='password',
-        max_length=100
-    )
+        max_length=100)
 
     def __str__(self):
         return self.username

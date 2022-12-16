@@ -84,11 +84,11 @@
                 aria-expanded="false">Galeria</a>
 
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="galeria.html">Imagenes</a></li>
+                <li><a class="dropdown-item" href="{% url 'blog' %}">Imagenes</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Videos</a></li>
+                <li><a class="dropdown-item" href="{% url 'video' %}">Videos</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -104,6 +104,21 @@
         </div>
       </div>
     </nav>
+
+
+    <div id="carouselExampleSlidesOnly carruselHeader" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner carrusel">
+          <div class="carousel-item active">
+              <img src="{% static 'img/header4.jpg' %}" class="d-block carruselHeader" width="100%" height="700"  alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="{% static 'img/header2.jpg' %}" class="d-block  carruselHeader" width="100%" height="700" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="{% static 'img/header3.jpg' %}" class="d-block  carruselHeader" width="100%" height="700" alt="...">
+          </div>
+      </div>
+  </div>
   </header>
   <!--%-%-%-%-%-%-%-%-%-%-- CONTENT --%-%-%-%-%-%-%-%-%-%-->
   <main id="contenidoPrincipal">
@@ -111,6 +126,7 @@
     <!--%-%-%-%-%-%-%-%-%-%-- CONTENIDO --%-%-%-%-%-%-%-%-%-%-->
     {% endblock %}
   </main>
+
   <!--%-%-%-%-%-%-%-%-%-%-- FOOTER --%-%-%-%-%-%-%-%-%-%-->
   <footer>
     <!-- Redes -->
