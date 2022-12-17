@@ -80,9 +80,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'fundacion_somos_barro',
         'USER': 'root',
-        'PASSWORD': 'ferrariENZO660',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '2424',
+        'PORT': '3306',
     }
 }
 
